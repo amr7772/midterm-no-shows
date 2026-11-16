@@ -1,0 +1,23 @@
+# caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# environments
+.venv/
+venv/
+.conda/
+.env
+
+# editors and OS
+.vscode/
+.idea/
+.DS_Store
+
+# Gradio temp files
+flagged/
+.gradio/
+
+# NOTE: models/ is deliberately NOT ignored. The Space needs the saved model.
