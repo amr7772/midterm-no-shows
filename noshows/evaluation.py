@@ -47,9 +47,10 @@ def choose_threshold(
     call_cost: float = CALL_COST,
     missed_cost: float = MISSED_COST,
 ) -> float:
-    """Return the threshold with the lowest total cost (the lowest one on a tie)."""
+    """Return the threshold with the lowest total cost (the highest one on a tie)."""
     costs = cost_by_threshold(y_true, probabilities, thresholds, call_cost, missed_cost)
-    return min(costs, key=lambda t: (costs[t], t))
+    # on a tie, prefer the higher threshold: the same cost with fewer $8 calls
+    return min(costs, key=lambda t: (costs[t], -t))
 
 
 def policy_costs(y_true, probabilities, threshold: float) -> dict:

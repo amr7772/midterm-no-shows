@@ -45,8 +45,9 @@ def test_threshold_on_a_hand_worked_example():
     # 0.45 to 0.60: call 0.9, 0.6; miss the 0.4      -> 2 x 8 + 35     = 51
     # 0.65 to 0.90: call 0.9; miss the 0.4           -> 8 + 35         = 43
     # 0.95:         call nobody; miss both           -> 2 x 35         = 70
-    assert choose_threshold(y_true, probabilities) == 0.25
-    assert cost_by_threshold(y_true, probabilities)[0.25] == 24
+    # on a tie the higher threshold wins: the same $24 with the fewest calls
+    assert choose_threshold(y_true, probabilities) == 0.40
+    assert cost_by_threshold(y_true, probabilities)[0.40] == 24
 
 
 @pytest.mark.parametrize(
