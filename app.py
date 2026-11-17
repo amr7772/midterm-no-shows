@@ -52,8 +52,12 @@ def predict_no_show(
     except ValueError as error:
         return "Invalid appointment", str(error)
 
-    except (FileNotFoundError, KeyError) as error:
-        return "Prediction unavailable", f"Model configuration error: {error}"
+    except (FileNotFoundError, KeyError, OSError):
+        return (
+            "Prediction unavailable",
+            "The prediction model could not be loaded. "
+            "Please contact the administrator.",
+        )
 
 
 @lru_cache(maxsize=1)
