@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 
 import pandas as pd
+
 LEAD_DAYS_RANGE = (0, 120)
 AGE_RANGE = (12, 110)
 PRIOR_NO_SHOWS_RANGE = (0, 30)
@@ -21,9 +22,7 @@ def _check_number(name: str, value: object, low: float, high: float) -> None:
     """Raise ValueError, naming the field, if value is not a number in range."""
     is_number = isinstance(value, int | float) and not isinstance(value, bool)
     if not is_number or not low <= value <= high:
-        raise ValueError(
-            f"{name} must be a number from {low} to {high}, got {value!r}"
-        )
+        raise ValueError(f"{name} must be a number from {low} to {high}, got {value!r}")
 
 
 def _check_choice(name: str, value: object, allowed: tuple[str, ...]) -> None:
@@ -61,7 +60,6 @@ class Appointment:
         _check_choice("booking", self.booking, BOOKINGS)
         _check_choice("insurance", self.insurance, INSURANCES)
         _check_choice("treatment", self.treatment, TREATMENTS)
-
 
     def to_frame(self) -> pd.DataFrame:
         """Return this booking as a one-row table with the training columns."""
