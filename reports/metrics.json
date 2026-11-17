@@ -1,0 +1,47 @@
+{
+  "test": {
+    "threshold": 0.2,
+    "appointments": 1000,
+    "confusion_matrix": {
+      "true_negative": 388,
+      "false_positive": 350,
+      "false_negative": 47,
+      "true_positive": 215
+    },
+    "precision": 0.381,
+    "recall": 0.821,
+    "f1": 0.52,
+    "roc_auc": 0.761,
+    "costs": {
+      "call_nobody": 9170,
+      "call_everybody": 8000,
+      "model": 6165
+    }
+  },
+  "leakage_check": {
+    "column": "fee_charged",
+    "honest_cv_roc_auc": 0.713,
+    "with_leaky_column_cv_roc_auc": 0.923
+  },
+  "cv_cost_by_threshold": {
+    "0.05": 23824,
+    "0.1": 22347,
+    "0.15": 20775,
+    "0.2": 19474,
+    "0.25": 19624,
+    "0.3": 20379,
+    "0.35": 21028,
+    "0.4": 22026,
+    "0.45": 23284,
+    "0.5": 24238,
+    "0.55": 25141,
+    "0.6": 25592,
+    "0.65": 26047,
+    "0.7": 26437,
+    "0.75": 26886,
+    "0.8": 27248,
+    "0.85": 27421,
+    "0.9": 27475,
+    "0.95": 27475
+  }
+}
