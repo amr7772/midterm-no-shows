@@ -56,9 +56,9 @@ Open the local URL printed in the terminal (usually `http://127.0.0.1:7860`).
 | Member | Work owned |
 |---|---|
 | Amr Mohamed | Repository setup and coordination; Hugging Face Space hosting |
-| Michael | Preprocessing pipeline, model comparison, and tuning |
-| Orcun | Cost function, threshold selection, training, and saved model/reports |
-| Miora Gaelle | `Appointment` and `NoShowPredictor` classes and their tests |
+| Michael Yen | Preprocessing pipeline, model comparison, and tuning |
+| Orcun Ercan | Cost function, threshold selection, training, and saved model/reports |
+| Miora Gaelle Rakotoarivony | `Appointment` and `NoShowPredictor` classes and their tests |
 | Sarthak Suman | Gradio app, class integration, input/error handling, Space settings, and deployment tests |
 
 Each member's contribution is documented through GitHub commits and pull requests. The Space hosting entry describes the assigned responsibility until deployment is verified.
