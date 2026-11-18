@@ -19,7 +19,7 @@ The assignment assumes a confirmation call costs **$8**, an uncalled no-show cos
 
 The application uses Python, scikit-learn, pandas, joblib, and a Gradio Blocks interface.
 
-**Public Hugging Face Space:** Add the URL after deployment.
+**Public Hugging Face Space:** https://huggingface.co/spaces/amreleraqi09/midterm-no-shows
 
 ## How to run it locally
 
