@@ -8,6 +8,16 @@ from noshows.appointment import Appointment
 from noshows.predictor import NoShowPredictor
 
 
+try:
+    import spaces
+
+    @spaces.GPU
+    def _gpu_placeholder():
+        pass
+except ImportError:
+    pass
+
+
 def predict_no_show(
     age,
     lead_days,
