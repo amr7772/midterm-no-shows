@@ -61,7 +61,7 @@ Open the local URL printed in the terminal (usually `http://127.0.0.1:7860`).
 | Miora Gaelle Rakotoarivony | `Appointment` and `NoShowPredictor` classes and their tests |
 | Sarthak Suman | Gradio app, class integration, input/error handling, Space settings, and deployment tests |
 
-Each member's contribution is documented through GitHub commits and pull requests. The Space hosting entry describes the assigned responsibility until deployment is verified.
+Each member's contribution is documented through GitHub commits and pull requests.
 
 ## Decisions
 
@@ -184,7 +184,7 @@ python -m ruff check .
 python -m pytest
 ```
 
-At the time of the Part 5 integration check, **61 tests passed**, and both Ruff checks passed. Re-run the checks from a fresh clone before submitting and after any later team changes.
+From a fresh clone of the final `main` branch, **61 tests passed**, and both Ruff checks passed.
 
 ## Limitations
 
@@ -195,4 +195,4 @@ At the time of the Part 5 integration check, **61 tests passed**, and both Ruff 
 - **Cost assumptions:** The model assumes every call costs $8 and prevents a no-show, while an uncalled missed visit costs $35. Real outcomes and costs may differ.
 - **Decision support only:** The prediction is a probability, not a certainty; reception staff should treat the call recommendation as an aid rather than an automatic clinical decision.
 
-Before final submission, replace the Space URL placeholder with the working public Hugging Face link, confirm member credits, and verify the public app in a signed-out browser session.
+
