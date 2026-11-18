@@ -7,7 +7,6 @@ import gradio as gr
 from noshows.appointment import Appointment
 from noshows.predictor import NoShowPredictor
 
-
 try:
     import spaces
 
