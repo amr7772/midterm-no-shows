@@ -21,6 +21,8 @@ The application uses Python, scikit-learn, pandas, joblib, and a Gradio Blocks i
 
 **Public Hugging Face Space:** https://huggingface.co/spaces/amreleraqi09/midterm-no-shows
 
+**Demo video:** https://drive.google.com/file/d/1cU9tBuaNq-3za8bxj39UrR2rKl6i_Th-/view?usp=sharing
+
 ## How to run it locally
 
 Clone the repository and enter the project folder:
